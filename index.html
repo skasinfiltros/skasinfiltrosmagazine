@@ -22,7 +22,6 @@
         <section id="inicio">
             <h1>Ediciones de la Revista</h1>
             <div class="ediciones-grid">
-                <!-- Ejemplo de ediciones -->
                 <div class="edicion">
                     <img src="assets/proximamente.jpg" alt="Próximamente">
                     <p>November - 1 2024</p>
@@ -31,15 +30,6 @@
                     <img src="assets/proximamente.jpg" alt="Próximamente">
                     <p>November - 2 2024</p>
                 </div>
-                <div class="edicion">
-                    <img src="assets/proximamente.jpg" alt="Próximamente">
-                    <p>December - 1 2024</p>
-                </div>
-                <div class="edicion">
-                    <img src="assets/proximamente.jpg" alt="Próximamente">
-                    <p>December - 2 2024</p>
-                </div>
-                <!-- Continúa hasta November - 2 2025 -->
             </div>
         </section>
     </main>
@@ -47,5 +37,39 @@
         <p>&copy; 2024 Ska Sin Filtros</p>
         <a href="#">Instagram</a> | <a href="#">Facebook</a>
     </footer>
+    <script>
+        // Desplazamiento suave entre secciones
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animaciones de aparición al hacer scroll
+        const ediciones = document.querySelectorAll('.edicion');
+
+        const callback = entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(callback, { threshold: 0.1 });
+
+        ediciones.forEach(edicion => {
+            observer.observe(edicion);
+        });
+
+        // Efecto de fade-in al cargar la página
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+    </script>
 </body>
 </html>
