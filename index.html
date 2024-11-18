@@ -7,7 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>¡Bienvenidos a Ska Sin Filtros!</h1>
-    <p>Pronto encontrarás todas las ediciones de la revista aquí.</p>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#ediciones">Ediciones</a></li>
+                <li><a href="#playlist">Playlists</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="inicio">
+            <h1>Ska Sin Filtros</h1>
+            <p>¡Bienvenido a tu espacio de ska independiente!</p>
+        </section>
+        <section id="ediciones">
+            <h2>Ediciones</h2>
+            <div class="ediciones-grid">
+                <div class="edicion">
+                    <img src="assets/portada1.jpg" alt="Portada 1">
+                    <a href="ediciones/edicion1.pdf" target="_blank">Ver edición</a>
+                </div>
+            </div>
+        </section>
+        <section id="playlist">
+            <h2>Playlists</h2>
+            <iframe src="https://open.spotify.com/embed/playlist/tu_playlist" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Ska Sin Filtros</p>
+        <a href="#">Instagram</a> | <a href="#">Facebook</a>
+    </footer>
 </body>
 </html>
