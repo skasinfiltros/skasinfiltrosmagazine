@@ -13,23 +13,93 @@
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#ediciones">Ediciones</a></li>
+                <li><a href="#notas">Notas</a></li>
                 <li><a href="#playlist">Playlists</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <!-- Sección Inicio -->
         <section id="inicio">
-            <h1>Ediciones de la Revista</h1>
+            <h1>Bienvenidos a Ska Sin Filtros</h1>
+            <p>Tu espacio dedicado al ska independiente y emergente.</p>
+        </section>
+
+        <!-- Sección Ediciones -->
+        <section id="ediciones">
+            <h2>Ediciones de la Revista</h2>
             <div class="ediciones-grid">
-                <div class="edicion">
-                    <img src="assets/proximamente.jpg" alt="Próximamente">
-                    <p>November - 1 2024</p>
-                </div>
-                <div class="edicion">
-                    <img src="assets/proximamente.jpg" alt="Próximamente">
-                    <p>November - 2 2024</p>
-                </div>
+                
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="November - 1 2024">
+        <p>November - 1 2024</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="November - 2 2024">
+        <p>November - 2 2024</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="December - 1 2024">
+        <p>December - 1 2024</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="December - 2 2024">
+        <p>December - 2 2024</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="January - 1 2025">
+        <p>January - 1 2025</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="January - 2 2025">
+        <p>January - 2 2025</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="February - 1 2025">
+        <p>February - 1 2025</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="February - 2 2025">
+        <p>February - 2 2025</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="March - 1 2025">
+        <p>March - 1 2025</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="March - 2 2025">
+        <p>March - 2 2025</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="April - 1 2025">
+        <p>April - 1 2025</p>
+    </div>
+    
+    <div class="edicion">
+        <img src="assets/proximamente.jpg" alt="April - 2 2025">
+        <p>April - 2 2025</p>
+    </div>
+    
+            </div>
+        </section>
+
+        <!-- Sección Notas -->
+        <section id="notas">
+            <h2>Notas</h2>
+            <div class="nota">
+                <h3><a href="notas/influencers_ska.html">¿Influencers del ska o colgados oportunistas del género?</a></h3>
+                <p>Exploramos cómo los influencers y oportunistas afectan al género ska en la era digital.</p>
             </div>
         </section>
     </main>
@@ -37,39 +107,5 @@
         <p>&copy; 2024 Ska Sin Filtros</p>
         <a href="#">Instagram</a> | <a href="#">Facebook</a>
     </footer>
-    <script>
-        // Desplazamiento suave entre secciones
-        document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href').substring(1);
-                document.getElementById(targetId).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Animaciones de aparición al hacer scroll
-        const ediciones = document.querySelectorAll('.edicion');
-
-        const callback = entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        };
-
-        const observer = new IntersectionObserver(callback, { threshold: 0.1 });
-
-        ediciones.forEach(edicion => {
-            observer.observe(edicion);
-        });
-
-        // Efecto de fade-in al cargar la página
-        window.addEventListener('load', () => {
-            document.body.classList.add('loaded');
-        });
-    </script>
 </body>
 </html>
