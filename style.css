@@ -57,3 +57,23 @@ footer {
     text-align: center;
     padding: 10px;
 }
+
+.ediciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.edicion img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.edicion p {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
