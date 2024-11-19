@@ -88,3 +88,70 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    text-align: center;
+}
+
+.close-btn {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
+
+/* Grid para mostrar bandas registradas */
+.bandas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.bandas-grid .banda-card {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.bandas-grid .banda-card img {
+    max-width: 100px;
+    margin: 10px auto;
+    border-radius: 50%;
+}
+
+.bandas-grid .banda-card .social-icons a {
+    margin: 0 5px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+}
+
+.bandas-grid .banda-card .social-icons a:hover {
+    color: #ff6600;
+}
